@@ -12,7 +12,42 @@
 </head>
 <body>
 
-    <div id='map' style='width: 400px; height: 300px;'></div>
+    <header>
+        <h1>Animal Migration Dashboard</h1>
+    </header>
+
+    <main>
+
+        <section class="card">
+
+            <div id="search">
+                <h2>Search By:</h2>
+                <select id="select-category">
+                    <option value="animal">Animal</option>
+                    <option value="location">Location</option>
+                </select>
+                <!--Hidden before "animal" or "category" is selected. If animal: set placeholder to species. If location: set placeholder to region.-->
+                <input type="text" id="option-text">
+                <submit id="search-btn">Search</submit>
+            </div>
+            <div id="search-history">
+                <h3>Search History:</h3>
+                <ul id="search-list">
+                    <!--Location of search history loop.-->
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="small-map">
+
+            <div id='map' style='width: 400px; height: 300px;'></div>
+            <img src="http://placekitten.com/500/200" alt="temporary description for below the small map">
+            <img src="http://placekitten.com/500/200" alt="alternate temporary image for small map">
+
+        </section>
+        
+     
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiY2hpY2tlbmNoYW1wNzEiLCJhIjoiY2xnNnlzeXRsMDh2OTNlcGEwNTIxemJlYiJ9.uV30dsqz49aMZVVR3s6mrg';
     var map = new mapboxgl.Map({
@@ -20,6 +55,8 @@
       style: 'mapbox://styles/mapbox/streets-v11'
     });
     </script>
+    </main>
+   
     
 </body>
 <script src="./assets/js/script.js"></script>
