@@ -18,7 +18,7 @@
 
     <main>
 
-        <section class="card col s12">
+        <section class="card">
 
             <div id="search">
                 <h2>Search By:</h2>
@@ -41,20 +41,25 @@
 
         <section id="small-map">
 
-            <div id='map' style='width: 900px; height: 600px;'></div>
+            <div id='map' style='width: 1300px; height: 600px;'></div>
             <img id="img1" src="http://placekitten.com/500/200" alt="temporary description for below the small map">
             <img id="img2" src="http://placekitten.com/500/200" alt="alternate temporary image for small map">
 
         </section>
         
+        <section id="results">
+            <div class="data" id="data1">
+                <p>Data #1</p>
+            </div>
+            <div class="data" id="data2">
+                <p>Data #2</p>
+            </div>
+            <div class="data" id="data3">
+                <p>Data #3</p>
+            </div>
+            <button id="return">Return to Home</button>
+        </section>
      
-    <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiY2hpY2tlbmNoYW1wNzEiLCJhIjoiY2xnNnlzeXRsMDh2OTNlcGEwNTIxemJlYiJ9.uV30dsqz49aMZVVR3s6mrg';
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11'
-    });
-    </script>
     </main>
    
     
