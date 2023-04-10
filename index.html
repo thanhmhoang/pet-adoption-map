@@ -28,7 +28,7 @@
                 </select>
                 <!--Hidden before "animal" or "category" is selected. If animal: set placeholder to species. If location: set placeholder to region.-->
                 <input type="text" id="option-text">
-                <submit id="search-btn">Search</submit>
+                <input type="submit" id="search-btn" value="Search">
             </div>
             <div id="search-history">
                 <h3>Search History:</h3>
@@ -41,9 +41,9 @@
 
         <section id="small-map">
 
-            <div id='map' style='width: 400px; height: 300px;'></div>
-            <img src="http://placekitten.com/500/200" alt="temporary description for below the small map">
-            <img src="http://placekitten.com/500/200" alt="alternate temporary image for small map">
+            <div id='map' style='width: 900px; height: 600px;'></div>
+            <img id="img1" src="http://placekitten.com/500/200" alt="temporary description for below the small map">
+            <img id="img2" src="http://placekitten.com/500/200" alt="alternate temporary image for small map">
 
         </section>
         
@@ -59,6 +59,7 @@
    
     
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./assets/js/script.js"></script>
 </html>
 
