@@ -11,5 +11,29 @@
         zoom: 9 // starting zoom
     });
 
+  // Code to get any user input that was saved in localStorage and set
+  // the values of the corresponding textarea elements
 
+  $( "#search-list" ).each(function( index ) {
+    var userSearch = $(this).parent().attr("id")
+    var searchHistory =localStorage.getItem(userSearch)
+    $(this).val(textValue)
+  });
+
+  // Code to get any user input that was saved in localStorage and set
+  // the values of the corresponding textarea elements
+  
+  function storeSearch () {
+    var savedSearch = JSON.parse(localStorage.getItem('savedText'));
+  
+    if (savedSearch === null) {
+      savedSearch = []
+      console.log('No searches saved.');
+    }
+      savedSearch.push("localstorage events")
+      console.log(savedSearch)
+      localStorage.setItem("savedText", JSON.stringify(savedSearch))
+    }
+
+  storeSearch();
 
