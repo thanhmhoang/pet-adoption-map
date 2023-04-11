@@ -43,8 +43,13 @@ header h1 {
     font-size: 20px;
     background-color: saddlebrown;
     color: white;
-    border-radius: 10%;
+    border-radius: 8px;
+    cursor: pointer ;
 }
+
+#search-btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
 
 #search-history {
     font-size: 20px;
