@@ -56,6 +56,11 @@ header h1 {
     margin: 10px;
 }
 
+.img {
+    margin: 10px;
+    padding-left: 7%;
+}
+
 #select-category {
     width: 300px;
     font-size: 20px;
