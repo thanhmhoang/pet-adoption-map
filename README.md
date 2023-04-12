@@ -1,14 +1,8 @@
-# animal-migration-map
+# pet-adoption-map
 
 ## Description
-
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
+  This website was made to give people looking to adopt a pet an easy way to search for a local shelter. It can take user input to make searching for a specific kind of animal easier. 
+  
 ## Table of Contents 
 
 - [Installation](#installation)
@@ -38,8 +32,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 #### Resources: 
 * We used this API: https://www.mapbox.com/
-* We used this API: https://www.movebank.org/cms/movebank-main
-
+* We used this API: https://www.petfinder.com/developers/ 
+* We used this CSS framework: https://bulma.io/
 
 ## License
 
@@ -50,6 +44,3 @@ Refer to license in repo.
 
 If your project has a lot of features, list them here.
 
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
