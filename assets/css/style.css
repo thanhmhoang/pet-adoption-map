@@ -115,3 +115,8 @@ h2 {
 .label {
     padding-left: 10px;
 }
+
+.img {
+    width: 600px;
+    height: 200px;
+}
