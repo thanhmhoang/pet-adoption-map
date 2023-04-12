@@ -4,32 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Migration Map</title>
+    <title>Pet Adoption Dashboard</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>Animal Migration Dashboard</h1>
+        <h1>Pet Adoption Dashboard</h1>
     </header>
 
     <main>
 
         <section class="card">
+            <h2>Find a Pet:</h2>
 
-            <div id="search">
-                <h2>Search By:</h2>
-                <select id="select-category">
-                    <option value="animal">Animal</option>
-                    <option value="location">Location</option>
-                </select>
-                <!--Hidden before "animal" or "category" is selected. If animal: set placeholder to species. If location: set placeholder to region.-->
-                <input type="text" id="option-text">
-               <a href="second-page.html"> <input type="submit" id="search-btn" value="Search"></a>
+            <div class="field-specie">
+                <label class="label">Animal Specie:</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Search">
+                </div>
+              </div>
+              
+              <div class="field-location">
+                <label class="label">Location:</label>
+                <div class="control">
+                  <input class="input" type="email" placeholder="Search">
+                </div>
+              </div>
             </div>
+
+            <a href="second-page.html"> <input type="submit" id="search-btn" value="Search"></a>
+            
             <div id="search-history">
                 <h3>Search History:</h3>
                 <ul id="search-list">
@@ -45,19 +54,6 @@
             <img class="img" id="img1" src="http://placekitten.com/500/200" alt="temporary description for below the small map">
             <img class="img" id="img2" src="http://placekitten.com/500/200" alt="alternate temporary image for small map">
 
-        </section>
-        
-        <section id="results">
-            <div class="data" id="data1">
-                <p>Data #1</p>
-            </div>
-            <div class="data" id="data2">
-                <p>Data #2</p>
-            </div>
-            <div class="data" id="data3">
-                <p>Data #3</p>
-            </div>
-            <button id="return">Return to Home</button>
         </section>
      
         <script>
