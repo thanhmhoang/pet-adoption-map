@@ -28,9 +28,6 @@ header h1 {
     color: white;
 }
 
-#second-page {
-    
-}
 .card {
     width: 40%;
     min-height: 60vh;
@@ -114,4 +111,9 @@ h2 {
 
 .label {
     padding-left: 10px;
+}
+
+.img {
+    width: 600px;
+    height: 200px;
 }
