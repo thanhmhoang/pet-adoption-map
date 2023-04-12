@@ -21,13 +21,12 @@ header h1 {
 
 #second-page {
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     height: 10vh;
     font-size: 35px;
     background-color: darkgreen;
     color: white;
 }
-
 
 .card {
     width: 40%;
