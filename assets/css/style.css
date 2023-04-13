@@ -172,25 +172,33 @@ h2 {
 }
 
 /* Adding mobile view */
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 768px) {
     .card {
        width: 20%;
        min-height: 20vh;
     }
     #map {
-        width: 0%
+        width: 75vh;
     }
     header {
-        display:flex;
        font-size: medium;
-       height: 10vh;
+       height: ;
     }
     header h1 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         padding-top: 20px;
     }
     #search-btn {
         width: 60%;
+        font-size: small;
     }
+    #adopt-btn {
+        width: 60%;
+        font-size: small;
+    }
+    
     #search-bar {
         width: 80%;
     }
@@ -198,3 +206,4 @@ h2 {
         display: none;
     }
 }
+
