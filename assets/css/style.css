@@ -114,7 +114,7 @@ select:hover {
     text-align: center;
 }
 
-#search-text {
+#geocoder {
     box-sizing: border-box;
     width: 90%;
 }
@@ -182,7 +182,6 @@ h2 {
     }
     header {
        font-size: medium;
-       height: ;
     }
     header h1 {
         display: flex;
