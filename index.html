@@ -22,15 +22,35 @@
         <section id="search">
             <h2>Find a Pet:</h2>
 
-            <div id="field-location">
+            <div id="search-species">
+                <label for="species">Species:</label>
+                <select id="species">
+                  <option value="">--Select--</option>
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="rabbit">Rabbit</option>
+                </select>
+              </div>
+              
+              <div id="field-location">
                 <label id="location">Location:</label>
                 <div id="search-bar">
                   <input class="input" id="search-text" type="text" placeholder="Search">
                 </div>
               </div>
-            </div>
+              
+              <div id="search-gender">
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                  <option value="">--Select--</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              
 
-            <a href="second-page.html"> <input type="submit" class="btn" id="search-btn" value="Search"></a>
+             <input type="submit" class="btn" id="search-btn" value="Search" onclick="getApi()">
+           
             
             <div id="search-history">
                 <h3>Search History:</h3>
