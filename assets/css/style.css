@@ -204,5 +204,9 @@ h2 {
     .img {
         display: none;
     }
+    #animals, #gender {
+        width: 60%;
+        font-size: small;
+    }
 }
 
