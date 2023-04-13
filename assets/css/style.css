@@ -15,6 +15,7 @@ body {
     height: 100vh;
 }
 
+
 header {
     height: 150px;
     font-size: 300%;
@@ -147,7 +148,6 @@ h2 {
     padding-left: 10px;
 }
 
-
 #location {
     font-weight: bold;
     font-size: 20px;
@@ -168,5 +168,30 @@ h2 {
     background-color: var(--card-color);
 }
 
-
-
+/* Adding mobile view */
+@media screen and (max-width: 812px) {
+    .card {
+       width: 20%;
+       min-height: 20vh;
+    }
+    #map {
+        width: 0%
+    }
+    header {
+        display:flex;
+       font-size: medium;
+       height: 10vh;
+    }
+    header h1 {
+        padding-top: 20px;
+    }
+    #search-btn {
+        width: 60%;
+    }
+    #search-bar {
+        width: 80%;
+    }
+    .img {
+        display: none;
+    }
+}
