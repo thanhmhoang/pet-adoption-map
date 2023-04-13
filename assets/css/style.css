@@ -64,12 +64,6 @@ h3 {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
 
-#search-history {
-    font-size: 20px;
-    margin: 5px;
-    padding: 10px;
-}
-
 #map {
     margin: 10px;
 }
