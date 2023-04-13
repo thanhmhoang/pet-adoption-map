@@ -90,6 +90,13 @@ select:hover {
     padding-bottom: 5px;
 }
 
+#adopt-btn {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
 
 .img {
     margin: 10px;
