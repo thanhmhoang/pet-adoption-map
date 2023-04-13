@@ -1,82 +1,103 @@
+:root {
+    --head-color: #2d7d46;
+    --body-color: #23272a;
+    --top-text-color: #ffffff;
+    --text-color: #efefef;
+    --card-color: #2c2f33;
+    --search-color: #9da1a4;
+    --sub-head-color: #1cb955;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    height: 100vh;
 }
 
 header {
+    height: 150px;
+    font-size: 300%;
+    background-color: var(--head-color);
+    color: var(--top-text-color);
+    padding-top: 10px;
+}
+
+header h1 {
     display: flex;
     justify-content: center;
-    height: 20vh;
-    font-size: 50px;
-    background-color: seagreen;
-    color: white;
+    text-align: center;
+    margin: 40px;
 }
 
 main {
     display: flex;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
-header h1 {
-    padding-top: 70px;
+#second-main {
+    display: block;
 }
 
-#second-page {
-    display: flex;
-    justify-content:flex-start;
-    height: 15vh;
-    font-size: 35px;
-    background-color: seagreen;
-    color: white;
+#map {
+    width: 65vw;
+    height: 70vh;
+    margin: 3vh 1vw 3vh 2vw;
+    border-radius: 5px;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 6px 25px 0 rgba(0,0,0,0.19);
 }
 
-.card {
-    width: 40%;
-    min-height: 60vh;
-    margin: 10px;
+#search {
+    width: 25vw;
+    height: 70vh;
+    margin: 3vh 1vw 3vh 2vw;
+    background-color: var(--card-color);
+    padding: 15px;
+    border-radius: 5%;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 6px 25px 0 rgba(0,0,0,0.19);
 }
 
 h3 {
     font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn,
+select {
+    font-size: 20px;
+    background-color: var(--head-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    cursor: pointer;
+    justify-content: center;
+    border-color: var(--head-color);
+}
+
+.btn:hover,
+select:hover {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 6px 25px 0 rgba(0,0,0,0.19);
+    color: var(--body-color);
+    background-color: var(--sub-head-color);
 }
 
 #search-btn {
-    font-size: 20px;
-    background-color: silver;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer ;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1px;
+    padding-bottom: 5px;
 }
-
-#search-btn:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
-
-  /* Return button on results page */
-  #return-btn {  
-    justify-content: center;
-    font-size: 20px;
-    background-color: silver;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer ;
-  }
-
-#return-btn:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
 
 #search-history {
     font-size: 20px;
-    margin: 5px;
-    padding: 10px;
-}
-
-#map {
-    margin: 10px;
+    margin: 5px 5% 10px 0;
 }
 
 .img {
     margin: 10px;
     padding-left: 7%;
+    display: none;
 }
 
 #select-category {
@@ -85,35 +106,67 @@ h3 {
     margin: 10px;
 }
 
-input {
-    width: 290px;
-    margin: 10px;
-    font-size: 20px;
+#search-bar {
+    text-align: center;
 }
 
-#results {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#search-text {
+    box-sizing: border-box;
+    width: 90%;
 }
 
 .input {
-    width: 600px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--search-color);
+    color: var(--text-color);
+    border-color: var(--search-color);
+    margin: 10px;
+}
+
+input {
+    font-size: 20px;
+}
+
+.input::placeholder {
+    color: var(--text-color);
+    opacity: 1;
 }
 
 h2 {
     font-size: 30px;
     font-weight: bold;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 
 .label {
     padding-left: 10px;
 }
 
-.img {
-    width: 600px;
-    height: 200px;
+
+#location {
+    font-weight: bold;
+    font-size: 20px;
 }
+
+#filters {
+    text-align: center;
+    margin-top: 4vh;
+}
+
+#results-box {
+    margin: 20px 0 20px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 96vw;
+    height: 60vh;
+    background-color: var(--card-color);
+}
+
+
+
