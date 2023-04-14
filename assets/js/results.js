@@ -1,6 +1,6 @@
 const petFinderKey = 'yEEAKZnWUKCg2CCaVX98cN18Lui10BkVFGpCfhgdxfuWc1tsyX';
-const petFinderSecret ='x2edze7geTJFCAYnPtTRRp0w7ADCnSzwyFhl2A5O';
-const accessToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RUVBS1puV1VLQ2cyQ0NhVlg5OGNOMThMdWkxMEJrVkZHcENmaGdkeGZ1V2MxdHN5WCIsImp0aSI6ImMwYTcwMDNmOTIxYTllNGI5MzcyODNhMTg1YWExNTI3ODgzZWZmNWRhYjZkNDJiZjgyZWJhZTIxMTYyMzI0M2Q0YzY1ZWVlNDk2ZDU4MDlhIiwiaWF0IjoxNjgxNDM1NTk0LCJuYmYiOjE2ODE0MzU1OTQsImV4cCI6MTY4MTQzOTE5NCwic3ViIjoiIiwic2NvcGVzIjpbXX0.dsUi4-n96euhkj5MSgJDXvnHkZW-YVtQer8m2--P3oUhyZjjEJ2kt_OwA0Xd2AtLSWog43lCL-JvUXyvtfAt1RzHn9B4HNrSfHkqaZnX5t8sIbvjduHthdcqQmQpu0yPYJrknyNgINBtT_9b3piyeErydQ-2xLGBwgHD9fv3FOIAHd-VCCmUqX8179o-uAm40qFVGJeMNnMLr6BXR7adW-kPVa1YjjdPDr4rXCphH62ZSF6nT7Lx9kBOfkbU64E4vo5GPfgTjQ77UYwFetCc8zZiJ9FogxzLYvYZbbUCHGw0_hO_RF-fZC2QPlFoBinSHe5jXFP869fHJ96TtMo8Kg'
+const petFinderSecret = 'x2edze7geTJFCAYnPtTRRp0w7ADCnSzwyFhl2A5O';
+const accessToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RUVBS1puV1VLQ2cyQ0NhVlg5OGNOMThMdWkxMEJrVkZHcENmaGdkeGZ1V2MxdHN5WCIsImp0aSI6ImVjZjljYzcyMWJjMGJmMTQwYjcwMDdkNTkwZDE0MDJmMTFjMWI5MGQ2ZGFlYjc3YTQxM2FlMjdlZDZlZDdmMzRiZDU4OTc4NDljYWU4ZGY4IiwiaWF0IjoxNjgxNDg5OTM5LCJuYmYiOjE2ODE0ODk5MzksImV4cCI6MTY4MTQ5MzUzOSwic3ViIjoiIiwic2NvcGVzIjpbXX0.mtQsLCFO4S0FpaIFQcKFuAS4ybPGYDmSoyQGKQ4K5e7u3Dbai9LvAiUkCvUa05m4_0IlnsTkzf_P-ndOxf3Iz00-uclmz5QjtawbzZpul-g3-BdeaWugmYT-TpkY89LbPf_dxL3c-iaSR05LE0GuQ_ZgCU0yDi4GBVFT5LRU9Gbek7sd8Be6jy6CcOZCIZ3guOwJ8BwwecU2ISiQYlTG8AJyCwsKlLeJWVgjoG_zEJppIUv0iJn_zMEs6KtmJyXVfNqHikSWCvlNan5xQkLitoITs_MeKyHrNOIu4uediJBjY4yOig2sRX8xj1AbQzB5qQGlfciCD3bzXkxX0GYt5g'
 function getApi() {
   const urlParams = new URLSearchParams(window.location.search)
   const speciesInput = urlParams.get('animals')
@@ -28,10 +28,10 @@ function getApi() {
     },
   })
     .then(response => {
-     return response.json()
+      return response.json()
     })
     .then(data => {
-        console.log(data)
+      console.log(data)
       const pets = data.animals;
       const petList = document.getElementById('results-box');
 
@@ -74,8 +74,32 @@ function getApi() {
           const petSize = document.createElement('li');
           petSize.innerHTML = `<strong>Size:</strong> ${pet.size}`;
           petInfo.appendChild(petSize);
+          const petEmail = document.createElement('li');
+          if (pet.contact.email) {
+            petEmail.innerHTML = `<strong>Email:</strong> ${pet.contact.email}`;
+          } else {
+            petEmail.innerHTML = 'Sorry, no email was provided';
+          }
+          const petLocation = document.createElement('li');
+          if (pet.contact.address.city && pet.contact.address.state) {
+            petLocation.innerHTML = `<strong>Location:</strong> ${pet.contact.address.city}, ${pet.contact.address.state}`;
+          } else {
+            petLocation.innerHTML = 'Sorry, no location was provided';
+          }
+          petInfo.appendChild(petLocation);
+
+          petInfo.appendChild(petEmail);
+          const petPhone = document.createElement('li');
+          if (pet.contact.phone) {
+            petPhone.innerHTML = `<strong>Phone:</strong> ${pet.contact.phone}`;
+          } else {
+            petPhone.innerHTML = 'Sorry, no number was provided';
+          }
+          petInfo.appendChild(petPhone);
+
           petItem.appendChild(petInfo);
           petList.appendChild(petItem);
+
         });
       }
     })
