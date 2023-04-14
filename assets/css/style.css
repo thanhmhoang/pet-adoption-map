@@ -210,15 +210,7 @@ h2 {
     margin-top: 4vh;
 }
 
-#results-box {
-    margin: 20px 0 20px 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 96vw;
-    height: 60vh;
-    background-color: var(--card-color);
-}
+
 
 /* Adding mobile view */
 @media screen and (max-width: 768px) {
@@ -259,3 +251,38 @@ h2 {
     }
 }
 
+
+
+img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  p {
+    text-align: center;
+    font-size: 45px;
+  }
+  
+  ul {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 1em;
+  }
+
+  #pet-list img[src='./assets/images/cat-dog stock.jpg'] {
+    width: 10px;
+  }
+
+  .pet-item h2{
+    font-size: 50px;
+    color: #2d7d46;
+  }
+
+  .pet-item p{
+    font-size: 30px;
+  }
+
+  .pet-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
