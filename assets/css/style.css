@@ -1,3 +1,38 @@
+
+  #animals, #gender, #search-btn {
+    margin: 0 10px;
+  }
+
+#search select {
+    margin: 10px 5px;
+    text-align: center;
+    width: 50%;
+  }
+
+#home-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #return-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    transition-duration: 0.4s;
+  }
+  
+  #return-btn:hover {
+    background-color: #00698C;
+  }
+
 :root {
     --head-color: #2d7d46;
     --body-color: #23272a;
